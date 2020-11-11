@@ -10,8 +10,8 @@ public class Player : MonoBehaviour
     private Controller2D controller;
 
     // Parametres
-    public float moveSpeed = 4f; // vitesse de deplacement tbd
-    private float gravity = -10f; // a definir
+    public float moveSpeed = 3.75f; // vitesse de deplacement: 60 pixels par seconde (1 unit = 16 pixels)
+    private float gravity = -11.25f; // a ajuster (ici 180 pixels par seconde)
 
     // Awake est appele a linitialisation de lobjet lorsque la scene se charge
     private void Awake()
@@ -38,6 +38,7 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         // todo: bouger le joueur en fonction de la gravite et les inputs du joueur
+        // En utilisant la methode Move du controller
     }
 
     // Y a aussi LateUpdate qui sexecute a chaque frame a la fin de la boucle, donc forcement apres tous les Update et FixedUpdate
