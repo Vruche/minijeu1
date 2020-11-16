@@ -298,7 +298,7 @@ MonoBehaviour:
   boxCollider: {fileID: 0}
   collisionMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   collisions:
     above: 0
     below: 0

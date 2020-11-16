@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
     // On y mettra a jour l etat du joueur
     private void Update()
     {
-        
+       
     }
 
     // Methode appelee a chaque frame ou la physique va etre mise a jour
@@ -39,6 +39,9 @@ public class Player : MonoBehaviour
     {
         // todo: bouger le joueur en fonction de la gravite et les inputs du joueur
         // En utilisant la methode Move du controller
+        Vector2 deltaMove = new Vector2(input.direction.x * moveSpeed * Time.deltaTime, gravity * Time.deltaTime);
+        
+        controller.Move(deltaMove);
     }
 
     // Y a aussi LateUpdate qui sexecute a chaque frame a la fin de la boucle, donc forcement apres tous les Update et FixedUpdate
