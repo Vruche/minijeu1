@@ -138,6 +138,8 @@ GameObject:
   - component: {fileID: 71715194}
   - component: {fileID: 71715193}
   - component: {fileID: 71715192}
+  - component: {fileID: 71715196}
+  - component: {fileID: 71715195}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -315,6 +317,40 @@ MonoBehaviour:
     faceDir: 0
     fallingThroughPlatform: 0
   input: {x: 0, y: 0}
+--- !u!111 &71715195
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71715187}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!95 &71715196
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71715187}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5b24226bf1b3d7f42939acd126d71247, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &287500783
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,8 +361,9 @@ GameObject:
   m_Component:
   - component: {fileID: 287500785}
   - component: {fileID: 287500784}
+  - component: {fileID: 287500786}
   m_Layer: 0
-  m_Name: Mouche_0
+  m_Name: Mouche
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -397,6 +434,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &287500786
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287500783}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 404c08a5eca26264ab96821be319e6ad, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &449092251
 GameObject:
   m_ObjectHideFlags: 0
@@ -974,6 +1030,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2595188303500992432, guid: af265e62ebb75dc44aa2566d8e82eb6a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2595188304163741705, guid: af265e62ebb75dc44aa2566d8e82eb6a, type: 3}
       propertyPath: m_Name
       value: Goutte_Acide

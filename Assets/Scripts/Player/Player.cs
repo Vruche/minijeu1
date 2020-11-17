@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(PlayerInput), typeof(Controller2D))]
+[RequireComponent(typeof(PlayerInput), typeof(Controller2D), typeof(Animator))]
 public class Player : MonoBehaviour
 {
     // Dependance aux autres composants
     private PlayerInput input;
     private Controller2D controller;
+    private Animator animator;
 
     // Parametres
     public float moveSpeed = 3.75f; // vitesse de deplacement: 60 pixels par seconde (1 unit = 16 pixels)
@@ -18,6 +19,7 @@ public class Player : MonoBehaviour
     {
         input = GetComponent<PlayerInput>();
         controller = GetComponent<Controller2D>();
+        animator = GetComponent<Animator>();
     }
 
     // Start est appele avant la 1ere frame ou lobjet est actif dans la scene
@@ -46,4 +48,9 @@ public class Player : MonoBehaviour
 
     // Y a aussi LateUpdate qui sexecute a chaque frame a la fin de la boucle, donc forcement apres tous les Update et FixedUpdate
     // Utile par exemple pour controller les cameras ou les animations
+    private void LateUpdate()
+    {
+        animator.SetFloat("Direction", input.direction.x);
+    }
+
 }

@@ -40,31 +40,31 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: -3522006566239786595, guid: 8bd936df4bc89424ba12158bdbb7acf3, type: 3}
-    - time: 0.041666668
+    - time: 0.05
       value: {fileID: -6609289861534404876, guid: 8bd936df4bc89424ba12158bdbb7acf3, type: 3}
-    - time: 0.083333336
+    - time: 0.1
       value: {fileID: -7210326409419398401, guid: 8bd936df4bc89424ba12158bdbb7acf3, type: 3}
-    - time: 0.125
+    - time: 0.15
       value: {fileID: 1988245953945405024, guid: 8bd936df4bc89424ba12158bdbb7acf3, type: 3}
-    - time: 0.16666667
+    - time: 0.2
       value: {fileID: 7329291628626438732, guid: 8bd936df4bc89424ba12158bdbb7acf3, type: 3}
-    - time: 0.20833333
-      value: {fileID: -7900587626549138081, guid: 8bd936df4bc89424ba12158bdbb7acf3, type: 3}
     - time: 0.25
+      value: {fileID: -7900587626549138081, guid: 8bd936df4bc89424ba12158bdbb7acf3, type: 3}
+    - time: 0.3
       value: {fileID: -3603890434172261092, guid: 8bd936df4bc89424ba12158bdbb7acf3, type: 3}
-    - time: 0.29166666
+    - time: 0.35
       value: {fileID: -4253153731981689305, guid: 8bd936df4bc89424ba12158bdbb7acf3, type: 3}
-    - time: 0.33333334
+    - time: 0.4
       value: {fileID: -135697575745368815, guid: 8bd936df4bc89424ba12158bdbb7acf3, type: 3}
-    - time: 0.375
+    - time: 0.45
       value: {fileID: -269007888663457933, guid: 8bd936df4bc89424ba12158bdbb7acf3, type: 3}
-    - time: 0.41666666
+    - time: 0.5
       value: {fileID: -7518352321215741204, guid: 8bd936df4bc89424ba12158bdbb7acf3, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 24
+  m_SampleRate: 20
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -102,7 +102,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.45833334
+    m_StopTime: 0.55
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -141,7 +141,7 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.45833334
+  - time: 0.55
     functionName: OnFormationDone
     data: 
     objectReferenceParameter: {fileID: 0}
