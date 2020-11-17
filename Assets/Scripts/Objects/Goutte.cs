@@ -12,10 +12,6 @@ public class Goutte : MonoBehaviour
     private Fall fallMovement;
     private Vector3 spawnPosition;
 
-    // State
-    public enum State { Formation, Falling, Splosh };
-    private State state;
-
     // Initialize dependencies and store spawn position
     private void Awake()
     {
@@ -32,7 +28,6 @@ public class Goutte : MonoBehaviour
     // Reset attributes when we spanw the GOUTTE
     public void Spawn()
     {
-        state = State.Formation;
         transform.position = spawnPosition;
         fallMovement.enabled = false;
         anim.Rebind();
@@ -41,7 +36,6 @@ public class Goutte : MonoBehaviour
     // Called by the Animator when the "Formation" animation is done
     public void OnFormationDone()
     {
-        state = State.Falling;
         anim.SetTrigger("StartsFalling");
         fallMovement.enabled = true;
     }
@@ -55,7 +49,6 @@ public class Goutte : MonoBehaviour
     // Detect collision (collider is only enabled while falling, see animation)
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        state = State.Splosh;
         anim.SetTrigger("HitsSomething");
     }
 
