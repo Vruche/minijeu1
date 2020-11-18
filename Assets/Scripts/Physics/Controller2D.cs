@@ -2,12 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-[RequireComponent(typeof(Rigidbody2D))]
 public class Controller2D : RaycastController
 {
-    private Rigidbody2D rb2d;
-
     private float maxSlopeAngle = 55;
 
     public CollisionInfo collisions;
@@ -51,7 +47,6 @@ public class Controller2D : RaycastController
     {
         base.Start();
         Init();
-        rb2d = GetComponent<Rigidbody2D>();
     }
 
     public void Init()
@@ -77,7 +72,6 @@ public class Controller2D : RaycastController
         collisions.Reset();
         collisions.prevVelocity = deltaMove;
 
-
         input = input_;
         
         if (deltaMove.y < 0)
@@ -100,13 +94,12 @@ public class Controller2D : RaycastController
             VerticalCollisions(ref deltaMove);
         }
         
-
         if (prevBelow && !(collisions.below || standingOnPlatform) && deltaMove.y <= 0) {
             collisions.fallingFromPlatform = true;
         }
 
-        rb2d.MovePosition(rb2d.position + deltaMove);
-
+        transform.position = transform.position + new Vector3(deltaMove.x, deltaMove.y, transform.position.z);
+        
         if (standingOnPlatform)
         {
             collisions.below = true;
