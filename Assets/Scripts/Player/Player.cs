@@ -66,6 +66,9 @@ public class Player : MonoBehaviour
 
         controller.Move(velocity * Time.deltaTime);
         isGrounded = controller.collisions.below;
+        if (isGrounded) {
+            velocity.y = 0f;
+        }
 
         UpdateAnimation();
     }
