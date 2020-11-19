@@ -15,7 +15,7 @@ public class Fall : MonoBehaviour
         controller = GetComponent<Controller2D>();
     }
 
-    void FixedUpdate()
+    void Update()
     {
         controller.Move(Vector3.down * speed * Time.deltaTime); 
     }
