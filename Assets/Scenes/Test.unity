@@ -459,7 +459,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 545767987d457e14982f4cc503c83c34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pathPoints: []
+  points:
+  - {fileID: 1696019654}
+  - {fileID: 1061076866}
 --- !u!1 &449092251
 GameObject:
   m_ObjectHideFlags: 0
